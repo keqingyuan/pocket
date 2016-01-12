@@ -92,6 +92,13 @@ public class Util {
 		return new String(ret);
 	}
 
+	/**
+	 * byte数组转换成十六进制字符串
+	 * @param d 字节数组
+	 * @param s 需要转换字节的起始位置
+	 * @param n 数组的长度
+	 * @return
+	 */
 	public static String toHexStringR(byte[] d, int s, int n) {
 		final char[] ret = new char[n * 2];
 
