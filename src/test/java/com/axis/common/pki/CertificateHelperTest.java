@@ -2,7 +2,7 @@ package com.axis.common.pki;
 
 import java.security.cert.CertificateEncodingException;
 import java.security.cert.X509Certificate;
-import com.axis.common.ftBaseFunc;
+import com.axis.common.ftPublicFunc;
 
 import junit.framework.TestCase;
 
@@ -20,15 +20,15 @@ public class CertificateHelperTest extends TestCase {
 			alias = CertificateHelper.getAlias(kp,pwd);
 			System.out.println(alias);
 			byte[] b = "111111111111111111111111111111111111111111111111".getBytes();
-			String data = new ftBaseFunc().ftBytesToHexString(b);
+			String data = new ftPublicFunc().ftBytesToHexString(b);
 			System.out.println(data);
 			//b = CertificateHelper.encryptByPublicKey(b, "certs//eload.server.cer");
 			b = CertificateHelper.encryptByPrivateKey(b, kp , pwd, alias, pwd);
-			data = new ftBaseFunc().ftBytesToHexString(b);
+			data = new ftPublicFunc().ftBytesToHexString(b);
 			System.out.println(data);
 			String cp = "certs//eload.server.cer";
 			b = CertificateHelper.decryptByPublicKey(b, cp);
-			data = new ftBaseFunc().ftBytesToHexString(b);
+			data = new ftPublicFunc().ftBytesToHexString(b);
 			System.out.println(data);
 			
 
@@ -70,10 +70,10 @@ public class CertificateHelperTest extends TestCase {
 			X509Certificate servercert = xh.getX509Certificate();
 			byte sign[] = servercert.getSignature();
 			byte data[] = servercert.getTBSCertificate();
-			System.out.println("CA: "+new ftBaseFunc().ftBytesToHexString(new X509Helper("certs//qingyuan.cer").getX509Certificate().getEncoded()));
-			System.out.println("server certs: "+new ftBaseFunc().ftBytesToHexString(servercert.getTBSCertificate()));
-			System.out.println("sign: "+ new ftBaseFunc().ftBytesToHexString(sign));
-			System.out.println("server PK: "+ new ftBaseFunc().ftBytesToHexString(servercert.getPublicKey().getEncoded()));
+			System.out.println("CA: "+new ftPublicFunc().ftBytesToHexString(new X509Helper("certs//qingyuan.cer").getX509Certificate().getEncoded()));
+			System.out.println("server certs: "+new ftPublicFunc().ftBytesToHexString(servercert.getTBSCertificate()));
+			System.out.println("sign: "+ new ftPublicFunc().ftBytesToHexString(sign));
+			System.out.println("server PK: "+ new ftPublicFunc().ftBytesToHexString(servercert.getPublicKey().getEncoded()));
 			
 			if(CertificateHelper.verify(data, sign, caPath))
 				System.out.println("success");

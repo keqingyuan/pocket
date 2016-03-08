@@ -13,7 +13,7 @@ import java.util.Date;
 import org.apache.commons.codec.StringDecoder;
 import org.apache.commons.codec.binary.Base64;
 
-import com.axis.common.ftBaseFunc;
+import com.axis.common.ftPublicFunc;
 import com.axis.common.exceptions.UtilException;
 
 public class X509Helper {
@@ -50,7 +50,7 @@ public class X509Helper {
 			}
 			else
 			{
-				byteCert = new ftBaseFunc().ftHexStringToBytes(certificate);
+				byteCert = new ftPublicFunc().ftHexStringToBytes(certificate);
 			}
 			ByteArrayInputStream certin = new ByteArrayInputStream(byteCert);
 			CertificateFactory cf = CertificateFactory.getInstance("X.509");
@@ -149,7 +149,7 @@ public class X509Helper {
 	 */
 	public String getSignature() {
 		byte[] b = x509.getSignature();
-		return new ftBaseFunc().ftBytesToHexString(b);
+		return new ftPublicFunc().ftBytesToHexString(b);
 	}
 
 	/**

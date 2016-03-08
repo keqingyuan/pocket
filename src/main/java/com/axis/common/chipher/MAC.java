@@ -1,11 +1,11 @@
 package com.axis.common.chipher;
 
 import com.axis.common.Stringutil;
-import com.axis.common.ftBaseFunc;
+import com.axis.common.ftPublicFunc;
 import com.axis.common.exceptions.UtilException;
 
 public class MAC {
-	static ftBaseFunc ftPublic = new ftBaseFunc();
+	static ftPublicFunc ftPublic = new ftPublicFunc();
 	public static final char IS_SHORT = 1;
 	public static final char IS_LONG = 0;
 	/**

@@ -5,7 +5,7 @@ package com.axis.common.chipher;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import com.axis.common.ftBaseFunc;
+import com.axis.common.ftPublicFunc;
 
 //import com.ft.ic.keyManage.javaCard.CapFile;
 
@@ -13,7 +13,7 @@ import com.axis.common.ftBaseFunc;
 
 public class SHA1 {
 
-	static ftBaseFunc ftPublic = new ftBaseFunc();
+	static ftPublicFunc ftPublic = new ftPublicFunc();
 	
 	  /**
 	   * SHA1安全哈希计算

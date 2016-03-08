@@ -17,12 +17,12 @@ import java.security.spec.X509EncodedKeySpec;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.axis.common.ftBaseFunc;
+import com.axis.common.ftPublicFunc;
 
 
 public class DSA {
 	 public static final String ALGORITHM = "DSA";
-	 static ftBaseFunc ftPublic = new ftBaseFunc();
+	 static ftPublicFunc ftPublic = new ftPublicFunc();
 	 
 	    /** 
 	     * 默认密钥字节数 

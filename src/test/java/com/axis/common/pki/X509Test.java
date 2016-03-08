@@ -2,7 +2,7 @@ package com.axis.common.pki;
 
 import java.security.cert.CertificateEncodingException;
 
-import com.axis.common.ftBaseFunc;
+import com.axis.common.ftPublicFunc;
 
 import junit.framework.TestCase;
 
@@ -17,7 +17,7 @@ public class X509Test extends TestCase {
 
 	public void testGetVersion() {
 		try {
-			System.out.println("* "+ new ftBaseFunc().ftBytesToHexString(cers.getX509Certificate().getTBSCertificate()));
+			System.out.println("* "+ new ftPublicFunc().ftBytesToHexString(cers.getX509Certificate().getTBSCertificate()));
 		} catch (CertificateEncodingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
