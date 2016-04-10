@@ -534,6 +534,7 @@ public class Convert {
 	
 	/**
 	 * byte数组转16进制字符串，一个字节转换成两个字符
+	 * 例如: 0x60 -> 60
 	 * @param bytes 被转换的byte数组
 	 * @return 转换后的十六进制字符串
 	 */
@@ -552,6 +553,7 @@ public class Convert {
 	
 	/**
 	 * 十六进制字符串转换成字节数组，两个字符为一个字节
+	 * 例如: 60 -> 0x60
 	 * @param str
 	 * @return 字节数组
 	 */
