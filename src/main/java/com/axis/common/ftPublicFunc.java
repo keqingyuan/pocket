@@ -979,7 +979,7 @@ public class ftPublicFunc {
 	 * @说明 根据tag获取tlv里对应的值，最多截取15个
 	 * @param tlv (输入)tlv字符串
 	 * @param tag (输入)tag标签(逗号分割)
-	 * @param dest (输出)对应的Tag值
+	 * @param dest (输出)对应的Tag值(逗号分割)
 	 * @return 0 成功
 	 */
 	public int ftTLVGetStrVal(String tlv, String tag, StringBuilder dest)
