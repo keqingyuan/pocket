@@ -83,7 +83,7 @@ public class Collectionutil {
 	 * @param colls 集合数组
 	 * @return 分页后的段落内容
 	 */
-	@SafeVarargs
+//	@SafeVarargs
 	public static <T> List<T> sortPageAll(int pageNo, int numPerPage, Comparator<T> comparator, Collection<T>... colls) {
 		final List<T> result = new ArrayList<T>();
 		for (Collection<T> coll : colls) {
@@ -109,7 +109,7 @@ public class Collectionutil {
 	 * @param colls 集合数组
 	 * @return 分业后的段落内容
 	 */
-	@SafeVarargs
+//	@SafeVarargs
 	public static <T> List<T> sortPageAll2(int pageNo, int numPerPage, Comparator<T> comparator, Collection<T>... colls) {
 		BoundedPriorityQueue<T> queue = new BoundedPriorityQueue<T>(pageNo * numPerPage);
 		for (Collection<T> coll : colls) {
@@ -236,7 +236,7 @@ public class Collectionutil {
 	 * 
 	 * @return HashSet对象
 	 */
-	@SafeVarargs
+//	@SafeVarargs
 	public static <T> HashSet<T> newHashSet(T... ts) {
 		HashSet<T> set = new HashSet<T>();
 		for (T t : ts) {
@@ -259,7 +259,7 @@ public class Collectionutil {
 	 * 
 	 * @return ArrayList对象
 	 */
-	@SafeVarargs
+//	@SafeVarargs
 	public static <T> ArrayList<T> newArrayList(T... values) {
 		return (ArrayList<T>) Arrays.asList(values);
 	}
@@ -322,7 +322,7 @@ public class Collectionutil {
 	 * @param arrays 数组集合
 	 * @return 合并后的数组
 	 */
-	@SafeVarargs
+//	@SafeVarargs
 	public static <T> T[] addAll(T[]... arrays) {
 		if (arrays.length == 1) {
 			return arrays[0];
