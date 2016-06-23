@@ -1026,6 +1026,8 @@ public class ftPublicFunc {
 			szTag = szTags[i];
 			while(bFlag)
 			{
+				if (szBuf.isEmpty())
+					break;
 				szTagBuf = szBuf.substring(nPos, nPos+2);
 				nTagLen = getTagLen(szTagBuf);
 				if(nTagLen == 2)
