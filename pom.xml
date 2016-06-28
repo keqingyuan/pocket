@@ -75,11 +75,11 @@
 			<scope>provided</scope>
 		</dependency>
 		<!-- 通用日志接口，可以适应不用的日志方式 -->
-<!-- 		<dependency>
+		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.20</version>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
